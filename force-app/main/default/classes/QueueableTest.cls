@@ -7,7 +7,6 @@ public with sharing class QueueableTest {
         insert acctest;
 
         List<Account> accs = new List<Account>{acctest};
-
         System.Test.startTest();
         QueueableAccountIndustries myTestJob = new QueueableAccountIndustries(accs);
         System.enqueueJob(myTestJob);
